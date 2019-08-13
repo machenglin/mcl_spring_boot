@@ -23,6 +23,7 @@
 
 	<modules>
 		<module>eureka_server</module>
+		<module>service_hi</module>
 	</modules>
 
 	<dependencies>
