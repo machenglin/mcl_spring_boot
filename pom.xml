@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.7.RELEASE</version>
+		<version>2.0.3.RELEASE</version>
 	</parent>
 
 	<groupId>com.feiyang</groupId>
@@ -24,6 +24,12 @@
 	<modules>
 		<module>eureka_server</module>
 		<module>service_hi</module>
+		<module>service_ribbon</module>
+		<module>service_feign</module>
+		<module>service_ribbon_hystrix</module>
+		<module>service_zuul</module>
+		<module>service_hi_zipkin</module>
+		<module>service_miya_zipkin</module>
 	</modules>
 
 	<dependencies>

@@ -1,5 +1,7 @@
 package com.feiyang.service;
 
+import com.xiaomi.miui.ad.emi.dynamic.datasource.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,12 +21,13 @@ public class ServiceHiApplication {
     public static void main(String[] args) {
         SpringApplication.run( ServiceHiApplication.class, args );
     }
-
+    @Autowired
+    private CustomerService customerService;
     @Value("${server.port}")
     String port;
 
     @RequestMapping("/hi")
     public String home(@RequestParam(value = "name", defaultValue = "forezp") String name) {
-        return "hi " + name + " ,i am from port:" + port;
+        return "hi " + customerService.findCustomer() + " ,i am from port:" + port;
     }
 }
